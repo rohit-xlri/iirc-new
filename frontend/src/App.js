@@ -4,6 +4,7 @@ import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import Homepage from "./screens/homepage";
 import Admin from "./screens/admin";
+import Checkout from "./screens/checkout";
 
 function App() {
   return (
@@ -18,6 +19,10 @@ function App() {
           <Route
           path="/somewhere/in/www/admin/"
             element={<Admin/>}
+          />
+          <Route
+          path="/checkout/:id"
+            element={<Checkout/>}
           />
         </Routes>
         <Footer/>

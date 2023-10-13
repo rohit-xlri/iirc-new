@@ -1,7 +1,11 @@
 import React from "react";
-import { Container, Typography, Box, Paper } from "@mui/material";
+import { Container, Typography, Box, Paper, Button } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
 
 export default function RegistrationFee() {
+
+  let navigate = useNavigate()
+
   return (
     <>
     <Box id="call-paper">
@@ -368,6 +372,9 @@ export default function RegistrationFee() {
             </li>
           </ul>
         </Typography>
+        <Box sx={{ display: "flex", justifyContent: "left", mt: 4}}>
+              <Button variant="contained" onClick={() => navigate("/checkout/paynow")}>Register Now - Make the Payment</Button>
+        </Box>
       </Container>
       </Box>
     </>

@@ -27,7 +27,7 @@ exports.allPayments = async (req, res) => {
       },
       body: JSON.stringify({
         query: "mutation($formId:String!){exportDynamicFormResponse2(formId: $formId){exportUrl}}",
-        variables:{"formId":""}
+        variables:{"formId":"FORM-DYN-2023-7XUS2Z"}
       })
     })
     let response = await results.json();
@@ -43,6 +43,7 @@ exports.allPayments = async (req, res) => {
           return res.status(404).json({ success: false, message: "Can't read CSV File", csvData:csvData});
         } 
         else{
+            console.log(csvData)
             let count = 0
              for(var i = 0; i< csvData.length ; i++){
               const { Name,Email,amount,paymentStatus} = csvData[i]
