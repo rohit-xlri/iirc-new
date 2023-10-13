@@ -1,0 +1,41 @@
+.conference-message {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  /* animation: flash 3s infinite; */
+  animation: flash 2s infinite, pulse 2s infinite;
+}
+
+.conference-text {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.conference-guidelines {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+@keyframes flash {
+  0%, 100% {
+    background-color: #f5f5f5;
+    box-shadow: none;
+  }
+  50% {
+    background-color: #f5f5f5; /* Attractive background color */
+    box-shadow: 0 0 10px 3px #bccf17; /* Pulsating glow effect */
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
